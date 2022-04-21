@@ -1,0 +1,42 @@
+## Intro
+
+Emotion is a library designed for writing css styles with JavaScript. It provides powerful and predictable style composition in addition to a great developer experience with features such as source maps, labels, and testing utilities. Both string and object styles are supported.
+
+## Installing the Packages
+There are two primary ways of using Emotion: framework-agnostic or specifically with React.
+
+The @emotion/css package is framework agnostic and the simplest way to use Emotion. 
+- It is the recommended way to use Emotion with a non React app.
+
+It is best to use the “@emotion/react” package when using React with a build environment that can be configured.
+
+
+## The css Prop
+The css prop allows you to style elements. 
+It can support an object or a tagged template literal. 
+
+At the top of the App.js file, import the css prop from emotion. 
+- Include the comment /** @jsxImportSource @emotion/react */ at the top of the file when using Create React App 4. 
+  - This comment informs Babel to customize the automatic runtime import.
+  
+```
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+```
+
+## Object Styles
+
+Instead of writing CSS properties in kebab-case, like regular CSS, you write them in camelCase. Notice properties are separated by a comma. Object styles are especially helpful because you don’t need a CSS call like with string styles but object styles can also be used with styled components.
+
+```
+<main
+  css={{
+    color: "#03045e",
+    background: "#caf0f8",
+    height: "1200px",
+    fontFamily: "helvetica",
+  }}
+>
+  ...
+</main>
+```
