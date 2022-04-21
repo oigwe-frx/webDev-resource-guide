@@ -40,3 +40,35 @@ Instead of writing CSS properties in kebab-case, like regular CSS, you write the
   ...
 </main>
 ```
+
+## String Styles
+
+The css prop also used tagged template literals. 
+Template literals are enclosed by the backtick (` `). 
+Notice the css properties are written in kebab-case and separated by a semicolon.
+
+
+```
+<img
+  src={logo}
+  alt="logo"
+  css={css`
+    display: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 100px;
+    width: 100px;
+  `}
+/>
+```
+
+## Styled Components
+
+The Emotion library has a package called @emotion/styled, which gives us access to styled, that allows you to create components that have styles attached to them. 
+It is similar to css prop except it is called with an HTML tag or React component.
+
+To install the styled package from the Emotion library, run the following command:
+
+```
+npm i @emotion/styled
+```
